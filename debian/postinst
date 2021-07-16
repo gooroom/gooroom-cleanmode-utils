@@ -1,0 +1,7 @@
+#/bin/bash
+
+#
+# update pam.d/lightdm to /etc/lightdm/lightdm
+# - debian-system-adjustments_1.4.1+grm2u1
+#   Added /etc/gooroom/adjustments/pam.d-update-lightdm.execute
+#

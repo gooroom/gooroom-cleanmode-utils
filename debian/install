@@ -1,5 +1,5 @@
-lightdm/session-cleanup.sh /etc/lightmd
-lightdm/session-setup.sh /etc/lightmd
+lightdm/session-cleanup.sh /etc/lightdm
+lightdm/session-setup.sh /etc/lightdm
 pam_clean_auth/pam_clean_auth.so /lib/x86_64-linux-gnu/security
 pam.d/lightdm /usr/share/gooroom-cleanmode-utils/pam.d
 lightdm/lightdm.conf /usr/share/gooroom-cleanmode-utils/lightdm

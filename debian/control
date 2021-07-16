@@ -2,7 +2,9 @@ Source: gooroom-cleanmode-utils
 Section: utils
 Priority: optional
 Maintainer: user <gooroom@gooroom.kr>
-Build-Depends: debhelper (>= 11)
+Build-Depends: debhelper (>= 11),
+			   libglib2.0-dev,
+			   libpam0g-dev
 Standards-Version: 4.1.3
 Homepage: http://gooroom.kr
 #Vcs-Browser: https://salsa.debian.org/debian/gooroom-cleanmode-utils

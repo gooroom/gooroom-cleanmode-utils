@@ -4,7 +4,7 @@ CLEAN_FLAG=/tmp/.cleanmode
 
 if [ -e ${CLEAN_FLAG} ];then
 	cp /usr/share/glib-2.0/schemas/10_gooroom-configuration.gschema.override /usr/share/glib-2.0/schemas/10_gooroom-configuration.gschema.override_ori
-	sed -i 's/bg_../bg_13/g' /usr/share/glib-2.0/schemas/10_gooroom-configuration.gschema.override 
+	sed -i 's/\(theme_\|\)bg_[0-9]\{1,\}/bg_13/g' /usr/share/glib-2.0/schemas/10_gooroom-configuration.gschema.override
 
 	glib-compile-schemas /usr/share/glib-2.0/schemas
 

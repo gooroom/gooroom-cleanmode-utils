@@ -1,7 +1,14 @@
-#/bin/bash
+#!/bin/bash
 
 #
 # update pam.d/lightdm to /etc/lightdm/lightdm
 # - debian-system-adjustments_1.4.1+grm2u1
 #   Added /etc/gooroom/adjustments/pam.d-update-lightdm.execute
 #
+SRC=/usr/share/gooroom-cleanmode-utils
+PAM=/usr/share/debian-system-adjustments/
+LIGHTDM=/etc/lightdm/
+
+cp -af $SRC/lightdm/lightdm.conf $LIGHTDM
+cp -af $SRC/pam.d/lightdm $PAM
+

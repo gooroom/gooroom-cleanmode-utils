@@ -19,10 +19,13 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_handle_t *pamh, int flags, int argc, const c
     const char *user;
 
     if (pam_get_user (pamh, &user, NULL) != PAM_SUCCESS) {
-	return PAM_USER_UNKNOWN;
+		return PAM_USER_UNKNOWN;
     }                                                                                  
 
     struct passwd *user_entry = getpwnam (user);
+	if (!user_entry) {
+		return PAM_SUCCESS;
+	}
     char *dir = NULL;
     char *tmpdir = NULL;
 
@@ -85,13 +88,18 @@ PAM_EXTERN int pam_sm_authenticate( pam_handle_t *pamh, int flags,int argc, cons
     int retval=0xff;
 
     const char *user = NULL;
+
     if (pam_get_user (pamh, &user, NULL) != PAM_SUCCESS) {
 	return PAM_USER_UNKNOWN;
     }
     
     struct passwd *user_entry = getpwnam (user);
-    char *dir = NULL;
-    dir = g_strdup_printf ("/tmp/%s", user_entry->pw_name);
+	if (!user_entry) {
+		return PAM_SUCCESS;
+	}
+
+    //char *dir = NULL;
+    //dir = g_strdup_printf ("/tmp/%s", user_entry->pw_name);
 
     char *flag = NULL;
     flag = g_strdup_printf ("/tmp/.cleanmode");

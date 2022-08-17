@@ -12,6 +12,9 @@ Homepage: http://gooroom.kr
 
 Package: gooroom-cleanmode-utils
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: gooroom-greeter (> 0.3.3+grm3u1),
+		 arctica-greeter-guest-session,
+		 ${shlibs:Depends},
+		 ${misc:Depends}
 Description: gooroom cleanmode utils
  gooroom cleanmode utils

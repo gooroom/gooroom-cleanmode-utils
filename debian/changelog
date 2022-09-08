@@ -1,3 +1,15 @@
+gooroom-cleanmode-utils (0.2.1+grm3u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [02b7a58b] Modified on gooroom-2.0
+
+  [ boyeon.choi ]
+  * [a6128696] Gooroom3.0 Initialization
+  * [bf15d2c3] Fixed first login(to GPMS) issue
+  * [30c06caa] Added depends for gooroom-greeter & artica-greeter-guest-session
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 08 Sep 2022 15:45:03 +0900
+
 gooroom-cleanmode-utils (0.1.1) unstable; urgency=medium
 
   * Initial Release.
